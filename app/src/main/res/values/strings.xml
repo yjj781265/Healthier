@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Healthier</string>
+    <string name="calories">Calories:</string>
+    <string name="food_name">Product Name:</string>
+    <string name="serving_size">Serving Size:</string>
+    <string name="total_fat">Total Fat:</string>
+    <string name="cholesterol">Cholesterol:</string>
+    <string name="sodium">Sodium:</string>
+    <string name="total_carbohydrate">Total Carbohydrate:</string>
+    <string name="sugars">Sugar:</string>
+    <string name="dfiber">Dietary fiber:</string>
+    <string name="potassium">Potassium:</string>
+    <string name="protein">Protein:</string>
+    <string name="search_text">Enter Food/Drink Name</string>
+    <string name="loading_message">Uploading image. Please wait.</string>
+
+
+    <string name="dialog_select_prompt">Choose a picture</string>
+    <string name="dialog_select_camera">Camera</string>
+    <string name="dialog_select_gallery">Gallery</string>
+
+    <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
+</resources>

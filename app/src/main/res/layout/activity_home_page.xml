@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context="com.jayangapp.healthier.HomePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/health">
+
+        <Button
+            android:id="@+id/textSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/photoSearch"
+            android:layout_alignStart="@+id/photoSearch"
+            android:layout_marginBottom="9dp"
+            android:background="@android:color/holo_blue_bright"
+            android:elevation="0dp"
+            android:text="Text Search"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="247dp"/>
+
+        <Button
+            android:id="@+id/photoSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="180dp"
+            android:background="@android:color/holo_orange_dark"
+            android:elevation="24dp"
+            android:text="Photo Search"
+            tools:layout_editor_absoluteX="141dp"
+            tools:layout_editor_absoluteY="325dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp"
+            app:srcCompat="@drawable/logo"/>
+    </RelativeLayout>
+
+
+</android.widget.RelativeLayout>

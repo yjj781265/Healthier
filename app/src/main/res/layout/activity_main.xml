@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearrLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+
+    tools:context="com.jayangapp.healthier.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/L_rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="0.82">
+
+        <EditText
+            android:id="@+id/Search_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:cursorVisible="false"
+            android:hint="@string/search_text"
+            android:imeOptions="actionSearch"
+            android:inputType="textAutoComplete"
+
+
+            android:maxLines="1"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            tools:background="@android:color/background_light"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <ScrollView
+            android:id="@+id/mscrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Search_Bar"
+            android:isScrollContainer="true"
+            android:scrollbarStyle="insideOverlay"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/health"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Search_Bar"
+
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/sodiuim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/cholesterol"
+                        android:layout_below="@+id/cholesterol_r"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/sodium"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/cholesterol_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/cholesterol"
+                        android:layout_alignBottom="@+id/cholesterol"
+                        android:layout_alignStart="@+id/total_fat_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/sodiuim_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/sodiuim"
+                        android:layout_alignBottom="@+id/sodiuim"
+                        android:layout_alignStart="@+id/cholesterol_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/food_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/foodPic"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/food_name"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/food_name_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/food_name"
+                        android:layout_alignBottom="@+id/food_name"
+                        android:layout_marginStart="44dp"
+                        android:layout_toEndOf="@+id/serving_size"
+                        android:textAlignment="center"
+                        android:textColor="@color/TextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/food_name"
+                        android:layout_below="@+id/food_name"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/calories"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/calries_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/serving_size"
+                        android:layout_alignStart="@+id/food_name_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="26sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/serving_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/calories"
+                        android:layout_below="@+id/calories"
+                        android:layout_marginTop="13dp"
+                        android:text="@string/serving_size"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/serving_size_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/serving_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@+id/calries_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/total_fat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/serving_size"
+                        android:layout_below="@+id/serving_size"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/total_fat"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/total_fat_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/total_fat"
+                        android:layout_alignBottom="@+id/total_fat"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/cholesterol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/total_fat"
+                        android:layout_below="@+id/total_fat"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/cholesterol"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/potassium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/sodiuim"
+                        android:layout_below="@+id/sodiuim"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/potassium"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/potassium_r"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/potassium"
+                        android:layout_alignBottom="@+id/potassium"
+                        android:layout_alignStart="@+id/sodiuim_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/total_carbohydrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/potassium"
+                        android:layout_below="@+id/potassium"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/total_carbohydrate"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/total_carbonhydrate_r"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/total_carbohydrate"
+                        android:layout_alignBottom="@+id/total_carbohydrate"
+                        android:layout_alignEnd="@+id/potassium_r"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/sugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/total_carbohydrate"
+                        android:layout_below="@+id/total_carbohydrate"
+                        android:layout_marginTop="23dp"
+                        android:text="@string/sugars"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/sugar_r"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/total_carbonhydrate_r"
+                        android:layout_alignTop="@+id/sugar"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/dietary_fiber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignStart="@+id/sugar"
+                        android:layout_below="@+id/sugar"
+                        android:layout_marginTop="9dp"
+                        android:layout_toStartOf="@+id/dietary_fiber_r"
+                        android:text="@string/dfiber"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/dietary_fiber_r"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/sugar_r"
+                        android:layout_alignTop="@+id/dietary_fiber"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/sodiuim"
+                        android:layout_below="@+id/dietary_fiber"
+                        android:layout_marginTop="11dp"
+                        android:text="@string/protein"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/protein_r"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/protein"
+                        android:layout_alignBottom="@+id/protein"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/foodPic"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="13dp"
+                        android:visibility="invisible"
+                        app:srcCompat="@android:color/background_light"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/Search_Bar"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</android.widget.LinearLayout>
